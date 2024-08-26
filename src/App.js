@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import HelloWorld from './HelloWorld';
+import CatImage from './CatImage';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <h1>Navigation Example</h1>
+        <button>
+          <Link to="/hello">Go to HelloWorld</Link>
+        </button>
+        <button>
+          <Link to="/cat">Go to cat image Page</Link>
+        </button>
+
+        <Routes>
+          <Route path="/hello" element={<HelloWorld />} />
+          <Route path="/cat" element={<CatImage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
