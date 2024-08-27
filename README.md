@@ -20,3 +20,5 @@ An easy-to-follow example integrating React. Works with Django for building web 
 * **`GET /hello-world/`** : Returns the current server time.
 * **`GET /cat-image/`** : Returns a random cat image URL.
    
+### Django Backend Repo
+Check out the Django backend repo: https://github.com/qwnim2/Django-backend.git
